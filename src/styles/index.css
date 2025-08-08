@@ -1,0 +1,97 @@
+/* src/styles/index.css */
+
+/* Define CSS variables for your color scheme */
+:root {
+  --primary-color: #8B4513; /* Saddle Brown */
+  --secondary-color: #FFD700; /* Gold */
+  --accent-color: #DC143C; /* Crimson (for chili) */
+  --background-color: #FFF8DC; /* Cornsilk */
+  --text-color: #333333; /* Dark Gray */
+}
+
+/* Base styles for the body */
+body {
+  font-family: 'Inter', sans-serif; /* Use Inter font */
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling for navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Basic reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Container for consistent width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Responsive utility classes (simple examples) */
+.text-center { text-align: center; }
+.mb-8 { margin-bottom: 2rem; }
+.py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+.rounded-lg { border-radius: 0.5rem; }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px; /* Full rounded */
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #b3002d; /* Darker crimson */
+  transform: scale(1.05);
+}
+
+/* Cards */
+.card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Headings */
+.section-heading {
+  font-size: 3rem; /* text-5xl equivalent */
+  font-weight: 800; /* font-extrabold equivalent */
+  color: var(--primary-color);
+  margin-bottom: 3rem; /* mb-12 equivalent */
+  text-align: center;
+}
+
+/* Responsive grid */
+.grid-cols-1 { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+@media (min-width: 768px) {
+  .md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Flexbox utilities */
+.flex-center { display: flex; justify-content: center; align-items: center; }
+.flex-col { flex-direction: column; }
+.space-y-4 > *:not(:last-child) { margin-bottom: 1rem; }
+.space-x-8 > *:not(:first-child) { margin-left: 2rem; }
+
